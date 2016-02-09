@@ -17,8 +17,13 @@ def readADC(ch):
 adcValues = [0 for i in range(8)]
 
 while 1:
-   time.sleep(0.2)
-   for ch in range(0,7):
-      adcValues[ch] = readADC(ch)
-   print "ADC Values = ", adcValues
+   try:
+      time.sleep(0.1) #10 hz output
+      for ch in range(0,7):
+         adcValues[ch] = readADC(ch)
+         print "ADC Values = ", adcValues
+   except KeyboardInterrupt:
+      break
+
+print "\n\ngoodbye."
 
