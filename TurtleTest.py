@@ -2,6 +2,13 @@ import turtle;
 import spidev
 import time
 import os
+#############################
+# TurtleTest.y
+#
+# uses the first two analog input channels to control the position of the
+# turtle. use in a windowing environment with an IDE like IDLE
+#
+#
 
 NUM_CH = 8
 
