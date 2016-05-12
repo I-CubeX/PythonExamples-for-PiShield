@@ -1,7 +1,8 @@
 import turtle;
 import spidev
 import time
-import os
+
+
 #############################
 # TurtleTest.y
 #

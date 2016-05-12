@@ -1,6 +1,5 @@
 import spidev
 import time
-import os
 
 NUM_CH = 8
 

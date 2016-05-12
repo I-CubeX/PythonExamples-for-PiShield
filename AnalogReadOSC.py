@@ -1,6 +1,5 @@
 import spidev
 import time
-import os, sys
 import OSC
 
 IP_ADDR='192.168.1.153'
