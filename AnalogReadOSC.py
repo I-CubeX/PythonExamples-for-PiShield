@@ -1,6 +1,7 @@
 import spidev
 import time
 import OSC
+import sys
 
 IP_ADDR='192.168.1.153'
 PORT=7000
