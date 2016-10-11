@@ -13,9 +13,13 @@ Requirements:
 - Some analog sensors of your choice
 
 Software:
-- Raspbian OS set up with SPI* 
-- Python 2.7.x, with spidev*
+- Raspbian OS set up with SPI\* 
+- Python 2.7.x, with spidev\*
 - Max/MSP (optional, for the test demo)
+- Python libraries:
+  - pykeyboard (install from pip)
+  - pyOSC (install from [github](https://github.com/ptone/pyosc))
+  
 
 (*these are already included in our pre-configured image, for manual setup instructions, check out our product page for details and tutorials)
 
