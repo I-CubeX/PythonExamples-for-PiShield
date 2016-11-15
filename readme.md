@@ -4,8 +4,11 @@ Raspberry Pi Python (2.7) demo code for getting data from the analog sensors con
 
 Contents:
 - AnalogRead8.py: reads 8 channels of analog input, and prints to console.
-- AnalogReadOSC.py: same as above, and sends it via OSC to external host (requires pyOSC)
-- AnalogReadOSC_max_test.maxpat: Max/MSP patch for testing the OSC functionality
+- AnalogReadOSC.py: same as above, and sends it via OSC to external host (requires pyOSC).
+- AnalogReadOSC_max_test.maxpat: Max/MSP patch for testing the OSC functionality.
+- KeyboardEmulator: assumes X and Y analog joysticks are plugged into the first 2 channels. maps up/down/left/right to the keyboard keys w/s/a/d, in the style of FPS game controls. The application using it must of course have keyboard focus. Designed to work with the GUI and tested with Minecraft.
+- TouchMe.py: simple thresholding for ON/OFF of the first analog channel. Designed to work with sensors like the ReachOn capacitive touch that emits a 0 when there is no touch, and a high value when touch is detected. Uses sys.stdin to create a non-scrolling console output.
+- TurtleTest.py: Works in the GUI. Uses X and Y input (same as KeyboardEmulator above) to control the drawing of the Python Turtle)
 
 Requirements:
 - Raspberry Pi board running Raspbian
