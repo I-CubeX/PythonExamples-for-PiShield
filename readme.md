@@ -17,7 +17,7 @@ Software:
 - Python 2.7.x, with spidev\*
 - Max/MSP (optional, for the test demo)
 - Python libraries:
-  - pykeyboard (install from pip)
+  - pyuserinput (install from pip)
   - pyOSC (install from [github](https://github.com/ptone/pyosc))
   
 
