@@ -33,7 +33,7 @@ while 1:
       time.sleep(0.02) #50 hz output
       oscMsg.clear()
       oscMsg.setAddress(MSG_ADDR)
-      for ch in range(0,7):
+      for ch in range(0, NUM_CH):
          val = readADC(ch)
          adcValues[ch] = readADC(ch)
          oscMsg.append(val)
