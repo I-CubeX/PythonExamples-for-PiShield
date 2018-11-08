@@ -7,6 +7,7 @@ NUM_CH = 8 #max number of channels of ADC
 # SPI device
 spi = spidev.SpiDev()
 spi.open(0,0)
+spi.max_speed_hz = 1000000 # required for Raspbian Stretch
 
 ###################
 # ADC read function
