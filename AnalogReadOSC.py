@@ -19,6 +19,7 @@ adcValues = [0 for i in range(NUM_CH)]
 
 spi = spidev.SpiDev() #init SPI device
 spi.open(0,0)         #open SPI port 0
+spi.max_speed_hz = 1000000 # required for Raspbian Stretch
 
 def readADC(ch):
    if ( (ch>NUM_CH-1) or (ch<0) ):
