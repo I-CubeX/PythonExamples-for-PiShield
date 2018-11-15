@@ -4,7 +4,7 @@ Raspberry Pi Python (2.7 / 3) demo code for getting data from the analog sensors
 
 Contents:
 - AnalogRead8.py: (Python 2) reads 8 channels of analog input, and prints to console.
-- AnalogReadMIDI.py: (Python 3) same as above, and sends it via MIDI to other software (requires JACK-Client).
+- AnalogReadMIDI.py: (Python 3) reads 2 channels, and sends them via MIDI to other software (requires JACK-Client).
 - AnalogReadOSC.py: (Python 2) same as above, and sends it via OSC to external host (requires pyOSC).
 - AnalogReadOSC-SP.py: (Python 3) same as above, and sends it via OSC to local host running Sonic Pi (requires python-osc).
 - AnalogReadOSC_max_test.maxpat: Max/MSP patch for testing the OSC functionality.
