@@ -46,6 +46,8 @@ triggered = [False for i in range(NUM_CH)]
 velocity = [0 for i in range(NUM_CH)]
 values = [[0 for i in range(NUM_SAMPLES)] for j in range(NUM_CH)]
 
+# send a NoteOn message when a tap gesture is detected and
+# map its intensity to velocity using an I-CubeX Touch or similar sensor
 def peakTrigger(chan, value, end):
     if (value > 10): # threshold to prevent false triggering
         if not triggered[chan]: # look for trigger
@@ -73,6 +75,8 @@ def peakTrigger(chan, value, end):
             midiOutBuffer.append((144, 64 + chan, 0))
         triggered[chan] = False
 
+# send ControlChange message whenever the value changes of
+# an I-CubeX Push, Slide, Turn or similar sensor 
 def changeContinuous(chan, val):
     #val = 0.7 * values[chan][1] + 0.3 * val # smoothing filter
     controlValue = round(val * 127 / 1023)
@@ -81,7 +85,7 @@ def changeContinuous(chan, val):
         print("\nsensor[%d].control = " % chan, controlValue)
             
 
-while 1:
+while True:
    try:
       time.sleep(0.01) # 100 hz output; change as needed
       for ch in range(0, NUM_CH):
@@ -91,9 +95,9 @@ while 1:
             values[ch][i] = values[ch][i - 1]
          values[ch][0] = val
          if (ch == 0):
-             peakTrigger(ch, val, True)
+             peakTrigger(ch, val, True) 
          elif (ch == 1):
-             changeContinuous(ch, val)             
+             changeContinuous(ch, val)            
       #print("ADC Values = ", adcValues)
    except KeyboardInterrupt:
       break
