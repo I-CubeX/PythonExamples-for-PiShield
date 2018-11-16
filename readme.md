@@ -1,9 +1,10 @@
 ##I-CubeX Raspberry Pi sensor interface: Python Examples
 
-Raspberry Pi Python (2.7 / 3) demo code for getting data from the analog sensors connected to the I-CubeX Pi Shield, with optional OSC sending capability.
+Raspberry Pi Python (2.7 / 3.4+) demo code for getting data from the analog sensors connected to the I-CubeX Pi Shield, with optional OSC sending capability.
 
 Contents:
 - AnalogRead8.py: (Python 2) reads 8 channels of analog input, and prints to console.
+- AnalogReadMIDI.py: (Python 3) reads 2 channels, and sends them via MIDI to other software (requires JACK-Client).
 - AnalogReadOSC.py: (Python 2) same as above, and sends it via OSC to external host (requires pyOSC).
 - AnalogReadOSC-SP.py: (Python 3) same as above, and sends it via OSC to local host running Sonic Pi (requires python-osc).
 - AnalogReadOSC_max_test.maxpat: Max/MSP patch for testing the OSC functionality.
@@ -19,11 +20,13 @@ Requirements:
 
 Software:
 - Raspbian OS set up with SPI\* 
-- Python 2.7.x or 3, with spidev\*
+- Python 2.7.x with spidev\*
+- Python 3.4+ with spidev
 - Max/MSP (optional, for the test demo)
 - Python libraries:
   - pyuserinput (install from pip)
   - pyOSC (install from [github](https://github.com/ptone/pyosc)) or python-osc
+  - JACK-Client (install from pip)
   
 
 (*these are already included in our pre-configured image, for manual setup instructions, check out our product page for details and tutorials)
